@@ -17,7 +17,6 @@
     "implicit flow",
     "oauth"
   ],
-  "types": "index.d.ts",
   "author": "Curity AB",
   "license": "UNLICENSED",
   "devDependencies": {
