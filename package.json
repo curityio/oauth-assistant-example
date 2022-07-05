@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Curity JS OAuth Assistant Example app",
   "scripts": {
-    "start": "webpack-dev-server --open --watch --config webpack.config.js"
+    "start": "webpack-dev-server --open --config webpack.config.js"
   },
   "keywords": [
     "curity",
@@ -21,13 +21,13 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@curity/oauth-assistant": "^1.7.1",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "babel-loader": "^8.1.0",
-    "@babel/core": "^7.10.0",
-    "style-loader": "^1.2.1",
-    "css-loader": "^3.5.3",
-    "webpack-dev-server": "^3.10.3"
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "babel-loader": "^8.2.5",
+    "@babel/core": "^7.18.6",
+    "style-loader": "^3.3.1",
+    "css-loader": "^6.7.1",
+    "webpack-dev-server": "^4.9.3"
   }
 }
