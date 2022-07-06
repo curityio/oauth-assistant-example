@@ -12,7 +12,7 @@ module.exports = {
     sourceMapFilename: "[file].map",
   },
   devServer: {
-    contentBase: "./",
+    static: "./"
   },
   module: {
     rules: [
@@ -39,4 +39,10 @@ module.exports = {
       chunks: ["exampleEntry"],
     }),
   ],
+  resolve: {
+    fallback: {
+      "https": false,
+      "crypto": false
+    }
+  }
 };
