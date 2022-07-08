@@ -20,7 +20,7 @@
   "author": "Curity AB",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@curity/oauth-assistant": "^1.7.1",
+    "@curity/oauth-assistant": "^1.8.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
