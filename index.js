@@ -147,7 +147,9 @@ function init(settings) {
     assistant.init()
         .then(() => {
             console.log("assistant loaded");
-        });
+        }).catch((error) => {
+            console.log("assistant initialization error: ", error)
+    });
 }
 
 function addEventListeners() {
