@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 module.exports = {
   target: "web",
@@ -37,6 +38,11 @@ module.exports = {
       filename: "assisted.html",
       template: "./assisted.html",
       chunks: ["exampleEntry"],
+    }),
+    new webpack.DefinePlugin({
+      "ISSUER": JSON.stringify(process.env.OAUTH_ASSISTANT_EXAMPLE_ISSUER) ??
+          (process.env.CURITY_IDENTITY_SERVER_DEFAULT_CONFIG ? "`${BASE_URL}/oauth/v2/oauth-anonymous`" : "`${BASE_URL}/dev/oauth/anonymous`"),
+      "EXAMPLE_BASE_URL": JSON.stringify(process.env.OAUTH_ASSISTANT_EXAMPLE_BASE_URL ?? "https://localhost:8443")
     }),
   ],
   resolve: {
