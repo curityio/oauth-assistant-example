@@ -9,8 +9,9 @@
  * For further information, please contact Curity AB.
  */
 
-import Assistant, { getMandatory } from '@curity/oauth-assistant';
+import Assistant from '@curity/oauth-assistant';
 import './css/style.css';
+import { defaultAuthorizeSettings } from "./defaultAuthorizeSettings";
 
 const loginFlowRedirectButton = document.querySelector("#loginFlowRedirect");
 const loginFlowRedirectMessage = document.querySelector("#loginMsgRedirect");
@@ -83,42 +84,6 @@ const checkSessionIframeEvents = {
         console.log("on state unchanged callback");
     },
 }
-
-/** @type Assistant.Settings */
-const defaultAuthorizeSettings = {
-    base_url                : "https://localhost:8443",
-    client_id               : "oauth-assistant-client",
-    // issuer         : "https://localhost:8443/oauth/v2/oauth-anonymous",
-    issuer                  : "https://localhost:8443/dev/oauth/anonymous",
-    redirect_uri            : window.origin + "/assisted.html",
-    for_origin              : window.origin,
-    flow_type               : "code",
-    iframe                  : {
-        targetElement: 'body',
-        width        : null, // take default value
-        height       : null, // take default value
-        backdrop     : {
-            visible      : true, // default is true
-            style        : null, // take default value
-            backdropClass: "backdrop-class"
-        }
-    },
-    popup:{
-      width        : null, // take default value
-      height       : null, // take default value
-    },
-    allowed_origins: ["https://localhost:8443", "http://localhost:8080"], // default is [window.origin]
-    check_session_iframe    : null,
-    session_polling_interval: 5, // polling interval in seconds, default is 5
-    allowed_jwt_algorithms  : ['RS256'],
-    jwt_sig_public_key      : { // allowed formats are jwk | jwks_uri | pem | issuer | metadata_url | raw
-        format: 'issuer', // in case of issuer, the issuer value will be taken from jwt payload
-        value : null
-    },
-    debug                   : false,
-    // openid_configuration_url: "" // Set if the OpenID Configuration URL uses different host or base path than the issuer
-    //check_session_iframe_events: checkSessionIframeEvents
-};
 
 selectedFlow.value = window.location.hash ? 'implicit' : 'code';
 
