@@ -57,6 +57,8 @@ const authorizeParamsInput = document.querySelector("#authorizeParameters");
 const logoutButton = document.querySelector("#logoutButton");
 const logoutMsg = document.querySelector("#logoutMsg");
 
+const resetButton = document.querySelector("#reset");
+
 /** @type HTMLInputElement */
 const postLogoutRedirectUri = document.querySelector("#postLogoutRedirectUri");
 
@@ -279,6 +281,10 @@ function addEventListeners() {
             .catch((err) => {
                 logoutMsg.innerHTML = "Failed to logout";
             });
+    });
+
+    resetButton.addEventListener('click', () => {
+        assistant.reset();
     });
 }
 

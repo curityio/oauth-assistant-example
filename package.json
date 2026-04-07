@@ -20,14 +20,14 @@
   "author": "Curity AB",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@curity/oauth-assistant": "^1.8.1",
-    "html-webpack-plugin": "^5.6.3",
-    "webpack": "^5.100.2",
-    "webpack-cli": "^6.0.1",
-    "babel-loader": "^10.0.0",
-    "@babel/core": "^7.28.0",
+    "@curity/oauth-assistant": "^1.9.0",
+    "html-webpack-plugin": "^5.6.6",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^7.0.2",
+    "babel-loader": "^10.1.1",
+    "@babel/core": "^7.29.0",
     "style-loader": "^4.0.0",
-    "css-loader": "^7.1.2",
-    "webpack-dev-server": "^5.2.2"
+    "css-loader": "^7.1.4",
+    "webpack-dev-server": "^5.2.3"
   }
 }
