@@ -1,5 +1,8 @@
 # Curity OAuth Assistant Example App
 
+[![Quality](https://img.shields.io/badge/quality-test-yellow)](https://curity.io/resources/code-examples/status/)
+[![Availability](https://img.shields.io/badge/availability-source-blue)](https://curity.io/resources/code-examples/status/)
+
 This is a trivial example application that shows how to use the [@curity/oauth-assistant](https://www.npmjs.com/package/@curity/oauth-assistant) to perform OAuth flows and OpenID Connect session management. The example is written using vanilla Javascript.
 
 ## Run the Application
